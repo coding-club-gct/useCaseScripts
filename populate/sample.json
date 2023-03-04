@@ -1,0 +1,18 @@
+[
+    {
+      "csvColumn": 1,
+      "keyName": "email",
+      "dataType": "string"
+    },
+    {
+      "csvColumn": 2,
+      "keyName": "password",
+      "dataType": "string"
+    },
+    {
+      "csvColumn": 0,
+      "keyName": "username",
+      "dataType": "string"
+    }
+  ]
+  
