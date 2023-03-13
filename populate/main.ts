@@ -7,6 +7,12 @@ let csvFile: string | undefined;
 let jsonConfigFile: string | undefined;
 let url: string | undefined;
 
+const sanitize = (str: string) => {
+  str = str.trim()
+  str = str.replace(/\'/g, "").replace(/\"/g, "")
+  return str
+}
+
 while (args.length > 0) {
   const key = args.shift();
   const value = args.shift();
@@ -74,7 +80,7 @@ for (const row of rows) {
     const value = data[csvColumn];
     switch (dataType) {
       case 'string':
-        postData[keyName] = value
+        postData[keyName] = sanitize(value)
         break;
       case 'number':
         let numValue = parseInt(value)
